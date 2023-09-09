@@ -1,0 +1,22 @@
+type Query{
+    obtainListCars: [Car]
+    obtainCarsById(id:String):Car
+}
+type Mutation{
+    saveCars(car:CarRequest):Car
+}
+type Car{
+    id: Int,
+    marca:String,
+    modelo:String,
+    cilindraje:Int,
+    color:String
+}
+
+input CarRequest {
+    id: Int,
+    marca: String,
+    modelo: String,
+    cilindraje: Int,
+    color: String
+}
